@@ -3,14 +3,18 @@ require 'pry'
 class Genre
 
   attr_accessor :name, :movies, :directors, :actors
-  @@all = []
-
   include Populate
+  
+  @@all=[]
+
+  def self.all
+    @@all
+  end
 
   def initialize(name)
     @name = name
-    @movies = []
     @@all << self
+    @movies = []
     @directors = []
     @actors = []
   end
@@ -18,7 +22,5 @@ class Genre
   def add_movie(title)
     self.movies << title
   end
-
-
 
 end

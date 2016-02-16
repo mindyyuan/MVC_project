@@ -2,12 +2,18 @@ require 'pry'
 
 class Actor
 
-attr_accessor :name, :movies, :genres, :directors
-@@all = []
-include Populate
+  attr_accessor :name, :movies, :genres, :directors
+  include Populate
+
+  @@all=[]
+
+  def self.all
+    @@all
+  end
 
   def initialize(name)
     @name = name
+    @@all << self
     @movies = []
     @genres = []
     @directors = []

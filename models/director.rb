@@ -1,12 +1,11 @@
 require 'pry'
 
 class Director
-  
 
   attr_accessor :name, :movies, :genres, :actors
   include Populate
 
-  @@all = []
+  @@all=[]
 
   def self.all
     @@all
@@ -14,8 +13,8 @@ class Director
 
   def initialize(name)
     @name = name
-    @movies = []
     @@all << self
+    @movies = []
     @genres = []
     @actors = []
   end
