@@ -7,9 +7,12 @@ quentin = Director.new("quentin")
 
 jamie = Actor.new("jamie foxx")
 
+
+
 django.add_actor(jamie)
 django.add_director(quentin)
 django.add_genre(western)
+
 
 
 
