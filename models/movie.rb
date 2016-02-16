@@ -2,6 +2,8 @@ require 'pry'
 
 class Movie
   extend Findable
+  extend Searchable
+  
   attr_accessor :rating
   attr_reader :title, :actors, :genres, :director
   @@all = []

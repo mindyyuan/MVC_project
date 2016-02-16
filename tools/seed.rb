@@ -18,5 +18,5 @@ django.add_genre(western)
 
 binding.pry
 
-puts "hello"
+puts "goodbye"
 
