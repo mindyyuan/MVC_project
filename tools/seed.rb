@@ -1,4 +1,4 @@
-require 'pry'
+require 'pry-byebug'
 django = Movie.new("django")
 
 western = Genre.new("western")
@@ -13,7 +13,6 @@ django.add_genre(western)
 
 
 
-binding.pry
+Pry.start
 
 puts "hello"
-

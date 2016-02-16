@@ -1,7 +1,7 @@
-require 'pry'
+require 'pry-byebug'
 
 class Actor
-
+  extend Populatable
 attr_reader :name, :movies, :genres, :directors
 @@all = []
 
@@ -24,15 +24,15 @@ attr_reader :name, :movies, :genres, :directors
     end.compact.flatten.uniq
   end
 
-  def populate_directors
-    @directors = self.movies.map do |title|
-      director = Movie.find_or_create_by_name(title).director
-      if director
-        director.actors << self.name
-        director.name
-      end
-    end.compact.flatten.uniq
-  end
+  # def populate_directors
+  #   @directors = self.movies.map do |title|
+  #     director = Movie.find_or_create_by_name(title).director
+  #     if director
+  #       director.actors << self.name
+  #       director.name
+  #     end
+  #   end.compact.flatten.uniq
+  # end
 
 
 end

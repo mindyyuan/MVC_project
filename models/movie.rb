@@ -1,4 +1,4 @@
-require 'pry'
+require 'pry-byebug'
 
 class Movie
 extend Findable
