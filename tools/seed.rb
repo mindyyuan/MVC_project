@@ -1,4 +1,5 @@
 require 'pry'
+
 django = Movie.new("django")
 
 western = Genre.new("western")
@@ -13,10 +14,4 @@ django.add_actor(jamie)
 django.add_director(quentin)
 django.add_genre(western)
 
-
-
-
-binding.pry
-
-puts "goodbye"
 

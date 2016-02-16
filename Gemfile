@@ -2,4 +2,6 @@
 source "https://rubygems.org"
 
 # gem "rails"
-gem 'pry'
+gem 'pry-byebug'
+gem 'require_all'
+gem 'rspec'
